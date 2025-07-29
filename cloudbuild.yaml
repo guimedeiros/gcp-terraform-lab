@@ -2,13 +2,17 @@ steps:
   - name: hashicorp/terraform:light
     entrypoint: terraform
     args: ["init"]
+    dir: terraform
 
   - name: hashicorp/terraform:light
     entrypoint: terraform
     args: ["plan", "-out=tfplan"]
+    dir: terraform
 
   - name: hashicorp/terraform:light
     entrypoint: terraform
     args: ["apply", "-auto-approve", "tfplan"]
+    dir: terraform
+
 options:
   logging: CLOUD_LOGGING_ONLY
