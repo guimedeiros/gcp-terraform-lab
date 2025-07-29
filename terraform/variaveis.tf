@@ -1,7 +1,8 @@
 locals {
   labels = {
-    "branch" = var.branch
+    "branch" = "master"
   }
+  environment = "prd"  
 }
 
 variable "project_id" {
