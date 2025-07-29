@@ -1,4 +1,5 @@
 steps:
+#
   - name: hashicorp/terraform:light
     entrypoint: terraform
     args: ["init"]
